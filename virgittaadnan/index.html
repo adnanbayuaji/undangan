@@ -616,8 +616,6 @@
 		$('#overlay').addClass('hide-overlay');
 		$(document).unbind('scroll'); 
   		$('body').css({'overflow':'visible'});
-        document.getElementById("my_audio").play();
-        console.log('done play');
 		/*yang bagian floating button ada animasinya tapi karena ketutup dulu sama overlay jadinya gak nampak*/
 		/*pengen pas di klik buka undangan baru jalan animasinya*/
 		/*var c = document.getElementsByClassName('right-sidebar');
@@ -625,6 +623,11 @@
 			c[i].classList.add('animate');
 		}*/
 	});
+
+	$(document).on('click', function(){
+        document.getElementById("my_audio").play();
+        console.log('done play');
+    });
 
 	$.get( "https://api.github.com/repos/adnanbayuaji/undangan/issues?state=all&per_page", function( data ) {
 		for (let i = 0; i < data.length; i++){
