@@ -51,6 +51,7 @@
 	<!-- Owl Carousel  -->
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link rel="stylesheet" href="assets/sakuraPetals/jquery-sakura.min.css">
 
 	<link type="text/css" rel="stylesheet" href="lib/lightgallery.js/dist/css/lightgallery-bundle.min.css" />
 	<link type="text/css" rel="stylesheet" href="lib/lightgallery.js/dist/css/lg-thumbnail.css" />
@@ -64,10 +65,19 @@
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	
+	
+    <style>
+        .music {
+            display: none;
+        }
+    </style>
 
 </head>
 <body>
 
+<div class="music">
+	<audio src="./assets/lagu.mp3" id="my_audio" loop="loop"></audio> 
+</div>
 <div class="fh5co-loader"></div>
 
 <div id="page">
@@ -581,6 +591,7 @@
 <script src="lib/lightgallery.js/dist/plugins/autoplay/lg-autoplay.min.js"></script>
 <script src="lib/lightgallery.js/dist/plugins/fullscreen/lg-fullscreen.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/2.0.3/showdown.min.js"></script>
+<script src="assets/sakuraPetals/jquery-sakura.min.js"></script>
 
 <script>
 	$( document ).ready(function() {
@@ -607,6 +618,9 @@
 		$('#overlay').addClass('hide-overlay');
 		$(document).unbind('scroll'); 
   		$('body').css({'overflow':'visible'});
+		$('body').sakura();
+        document.getElementById("my_audio").play();
+        console.log('done play');
 		/*yang bagian floating button ada animasinya tapi karena ketutup dulu sama overlay jadinya gak nampak*/
 		/*pengen pas di klik buka undangan baru jalan animasinya*/
 		/*var c = document.getElementsByClassName('right-sidebar');
