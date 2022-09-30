@@ -64,7 +64,6 @@
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	
-	
     <style>
         .music {
             display: none;
@@ -115,7 +114,7 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 						<h1>Virgitta & Adnan</h1>
-						<p style="margin-bottom: 0">Kepada Bapak/Ibu/Saudara/i</p>
+						<p style="margin-bottom: 0">Kepada Bapak/Ibu/Saudara/i <p id="demo"></p></p>
 						<p>Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami.</p>
 
 						<button class="btn btn-primary" id="open-invitation">Buka Undangan</button>
@@ -739,6 +738,25 @@
 
 	// Since we are using dynamic mode, we need to programmatically open lightGallery
 	inlineGallery.openGallery();
+	
+	function camelize(str) {
+		// Split the string at all space characters
+		return str.split(' ')
+		// get rid of any extra spaces using trim
+		.map(a => a.trim())
+		// Convert first char to upper case for each word
+		.map(a => a[0].toUpperCase() + a.substring(1))
+		// Join all the strings back together
+		.join(" ")
+	}
+
+	var urlParams = new URLSearchParams(window.location.search);
+	var has_msg = urlParams.has('to'); // true (boolean)
+	var msg = urlParams.get('to'); //success
+	if(has_msg)
+	{
+		document.getElementById("demo").innerHTML = camelize(msg);
+	}
 </script>
 
 </body>
