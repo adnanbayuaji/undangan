@@ -64,12 +64,9 @@
 	<!-- Modernizr JS -->
 	<script src="js/modernizr-2.6.2.min.js"></script>
 	
-<<<<<<< HEAD
 	<!-- fa icon css -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	
-=======
->>>>>>> origin
     <style>
         .music {
             display: none;
@@ -120,7 +117,7 @@
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 						<h1>Virgitta & Adnan</h1>
-						<p style="margin-bottom: 0">Kepada Bapak/Ibu/Saudara/i <p id="demo"></p></p>
+						<p style="margin-bottom: 0">Kepada Bapak/Ibu/Saudara/i</p>
 						<p>Kami Mengundang Anda Untuk Hadir Di Acara Pernikahan Kami.</p>
 
 						<button class="btn btn-primary" id="open-invitation">Buka Undangan</button>
@@ -240,7 +237,7 @@
 							</div>
 							<div class="event-col">
 								<i class="icon-calendar"></i>
-								<span>Jum'at</span>
+								<span>Sabtu</span>
 								<span class="tanggal">25 November 2022</span>
 							</div>
 							<p style="font-family: 'Courgette', Arial, serif">Alamat : Perumahan Sidokare Asri AY-16 RT.21 RW.06 Sepande, Kec. Candi, Kabupaten Sidoarjo</p>
@@ -286,7 +283,7 @@
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading animate-box">
 					<h2>Galeri Foto</h2>
-					<h3 style="color: #bf9b73">Khitbah Day - 9 Januari 2022</h3>
+					<h3 style="color: #bf9b73">Khitbah Day - 22 Januari 2022</h3>
 				</div>
 			</div>
 			<div class="row row-bottom-padded-md animate-box">
@@ -750,25 +747,6 @@
 
 	// Since we are using dynamic mode, we need to programmatically open lightGallery
 	inlineGallery.openGallery();
-	
-	function camelize(str) {
-		// Split the string at all space characters
-		return str.split(' ')
-		// get rid of any extra spaces using trim
-		.map(a => a.trim())
-		// Convert first char to upper case for each word
-		.map(a => a[0].toUpperCase() + a.substring(1))
-		// Join all the strings back together
-		.join(" ")
-	}
-
-	var urlParams = new URLSearchParams(window.location.search);
-	var has_msg = urlParams.has('to'); // true (boolean)
-	var msg = urlParams.get('to'); //success
-	if(has_msg)
-	{
-		document.getElementById("demo").innerHTML = camelize(msg);
-	}
 </script>
 
 </body>
