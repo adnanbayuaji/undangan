@@ -206,7 +206,7 @@
 			$('#fh5co-counter').waypoint( function( direction ) {
 										
 				if( direction === 'down' && !$(this.element).hasClass('animated') ) {
-					setTimeout( counter , 1100);					
+					setTimeout( counter , 700);					
 					$(this.element).addClass('animated');
 				}
 			} , { offset: '90%' } );
